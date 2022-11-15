@@ -4,7 +4,7 @@ GET http://localhost:3000/user/ HTTP/1.1
 ################################
 
 // Get Single User
-GET http://localhost:3000/user/id HTTP/1.1
+GET http://localhost:3000/user/6373f3a7d3e60fe588fed34c HTTP/1.1
 
 ################################
 
@@ -13,10 +13,28 @@ POST http://localhost:3000/user/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "Iluno Nzubechukwu Ugochukwu",
-    "address": "No. 600 Nwaniba Street, Uyo",
-    "email": "mendougo@gmail.com",
-    "password": "jdkjhbgdjyfg",
-    "phone": "070514454778",
-    "role": "President"
+    "username": "Ogwu Paschal Igiri",
+    "address": "No. 405 Nwaniba Street, Uyo",
+    "email": "paschalo@gmail.com",
+    "password": "ksfhfbsyjd",
+    "phone": "07051726647",
+    "role": "Secretary General"
 }
+
+################################
+// Update User
+PUT http://localhost:3000/user/6373f3a7d3e60fe588fed34c HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Thomas Emmanuel Ogah",
+    "address": "No. 8354 Nwaniba Street, Uyo",
+    "email": "teonet@gmail.com",
+    "password": "jsjdkyugjyg",
+    "phone": "07051445478",
+    "role": "Asst. Secretary General"
+}
+
+################################
+// Delete User
+DELETE http://localhost:3000/user/6373f3a7d3e60fe588fed34c HTTP/1.1

@@ -73,3 +73,52 @@ exports.createUser = async (req, res) => {
     });
   }
 };
+
+// Update User
+exports.updateUser = async (req, res) => {
+  try {
+    let user = await req.body;
+    let id = {_id: req.params.id};
+    let updated = await User.findByIdAndUpdate(id, user);
+    if (!updated) {
+      return res.status(400).json({
+        success: false,
+        message: "User Not Updated Successfully",
+      });
+    }
+    return res.status(200).json({
+      success: true,
+      message: "User Updated Successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "internal server error",
+      error: error.message
+    });
+  }
+};
+
+// Delete User
+exports.deleteUser = async (req, res) => {
+  try {
+    let id = { _id: req.params.id };
+    let deleted = await User.deleteOne(id);
+    if (!deleted) {
+      return res.status(400).json({
+        success: false,
+        message: 'User Not Deleted Successfully'
+      });
+    }
+    return res.status(200).json({
+      success: true,
+      message: 'User Deleted Successfully'
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "internal server error",
+      error: error.message
+    });
+  }
+};
