@@ -1,0 +1,22 @@
+// Get all Users
+GET http://localhost:3000/user/ HTTP/1.1
+
+################################
+
+// Get Single User
+GET http://localhost:3000/user/id HTTP/1.1
+
+################################
+
+// Create a new User
+POST http://localhost:3000/user/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Iluno Nzubechukwu Ugochukwu",
+    "address": "No. 600 Nwaniba Street, Uyo",
+    "email": "mendougo@gmail.com",
+    "password": "jdkjhbgdjyfg",
+    "phone": "070514454778",
+    "role": "President"
+}

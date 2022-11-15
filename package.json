@@ -1,0 +1,28 @@
+{
+  "name": "user_api_mongodb",
+  "version": "1.0.0",
+  "description": "A database-backed user api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./source/index.js",
+    "dev": "nodemon ./source/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chibuzormax/User_API_MongoDB.git"
+  },
+  "author": "MAXIMUS ISAAC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chibuzormax/User_API_MongoDB/issues"
+  },
+  "homepage": "https://github.com/chibuzormax/User_API_MongoDB#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
